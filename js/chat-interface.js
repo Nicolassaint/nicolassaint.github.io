@@ -43,9 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const userMessage = userInput.value.trim();
         if (!userMessage) return;
 
-        // console.log('=== Starting new message ===');
-        // console.log('User message:', userMessage);
-
         addMessage(userMessage, true);
         userInput.value = "";
         showTypingIndicator();
@@ -84,8 +81,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     `;
     document.head.appendChild(style);
-
-    // console.log('Chat interface initialized');
 });
 
 function initChatInterface(apiHandler) {
@@ -131,9 +126,6 @@ function initChatInterface(apiHandler) {
         const userMessage = userInput.value.trim();
         if (!userMessage) return;
 
-        // console.log('=== Starting new message ===');
-        // console.log('User message:', userMessage);
-
         addMessage(userMessage, true);
         userInput.value = "";
         showTypingIndicator();
@@ -172,8 +164,6 @@ function initChatInterface(apiHandler) {
         }
     `;
     document.head.appendChild(style);
-
-    // console.log('Chat interface initialized');
 }
 
 // Exporter la fonction initChatInterface pour qu'elle soit accessible globalement
