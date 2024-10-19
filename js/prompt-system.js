@@ -9,7 +9,7 @@ class PromptManager {
 
     addToHistory(role, content) {
         this.conversationHistory.push({ role, content });
-        // Gardez seulement les 10 derniers messages pour éviter les limites de tokens
+        // Gardez seulement les 10 derniers messages pour éviter les limites de tokens LLM
         if (this.conversationHistory.length > 10) {
             this.conversationHistory.shift();
         }
