@@ -1,4 +1,4 @@
-# Nicolas Saint's Portfolio
+# Nicolas Saint's Portfolio Frontend
 
 This repository contains the source code and content for my personal portfolio and blog, built with [Hugo](https://gohugo.io/) and using the [PaperMod theme](https://github.com/adityatelange/hugo-PaperMod).
 
@@ -86,13 +86,13 @@ npm run deploy
 
 This will:
 
-1. Build the static files into the `public/` directory using Hugo.
-2. Push the content of the `public/` directory to the `gh-pages` branch of your repository, which GitHub Pages uses to serve the site.
+1. Build the static files into the `docs/` directory using Hugo.
+2. Push the content of the `docs/` directory to the `gh-pages` branch of your repository, which GitHub Pages uses to serve the site.
 
-Make sure your `baseURL` in `config.yaml` is set correctly, especially if you're deploying to a project page:
+Make sure your `baseURL` in `config.yaml` is set correctly, especially if you're deploying to a project page or custom domain:
 
 ```yaml
-baseURL: "https://nicolassaint.github.io"
+baseURL: "https://nicolassaint.fr"
 ```
 
 ## Modify the Content
