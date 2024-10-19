@@ -54,7 +54,7 @@ class APIHandler {
 
             return assistantResponse;
         } catch (error) {
-            console.error('Erreur lors de l\'appel à Netlify:', error);
+            console.error('Erreur lors de l\'appel au Backend:', error);
             throw error;
         }
     }
