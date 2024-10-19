@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Python on Nicolas Saint</title>
+    <link>https://nicolassaint.fr/en/tags/python/</link>
+    <description>Recent content in Python on Nicolas Saint</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://nicolassaint.fr/en/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OlympIA</title>
+      <link>https://nicolassaint.fr/en/projects/olympia/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nicolassaint.fr/en/projects/olympia/</guid>
+      <description>Chatbot for the French Ministry of Economy and Finance</description>
+    </item>
+    
+    <item>
+      <title>OlympIA API</title>
+      <link>https://nicolassaint.fr/en/projects/olympia-api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nicolassaint.fr/en/projects/olympia-api/</guid>
+      <description>Generative AI API for the French Ministry of Economy and Finance</description>
+    </item>
+    
+    <item>
+      <title>Olympiabhub Python Package</title>
+      <link>https://nicolassaint.fr/en/projects/olympiabhub/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nicolassaint.fr/en/projects/olympiabhub/</guid>
+      <description>Python package for the Olympia API</description>
+    </item>
+    
+    <item>
+      <title>Sentiment Analysis Dashboard with Machine Learning</title>
+      <link>https://nicolassaint.fr/en/projects/etna/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nicolassaint.fr/en/projects/etna/</guid>
+      <description>Interactive Dashboard for Analyzing Employee Satisfaction Data at the French Ministry of Economy and Finance</description>
+    </item>
+    
+    <item>
+      <title>M2 Data Science</title>
+      <link>https://nicolassaint.fr/en/education/polytechnique/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nicolassaint.fr/en/education/polytechnique/</guid>
+      <description>École Polytechnique | Paris, France</description>
+    </item>
+    
+    <item>
+      <title>Data Scientist intern (AI &amp; LLM&#39;s)</title>
+      <link>https://nicolassaint.fr/en/experience/bercy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nicolassaint.fr/en/experience/bercy/</guid>
+      <description>Ministry of Economy and Finance | Paris, France</description>
+    </item>
+    
+    <item>
+      <title>Chief Information Officer</title>
+      <link>https://nicolassaint.fr/en/experience/jeece/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nicolassaint.fr/en/experience/jeece/</guid>
+      <description>JEECE | Paris, France</description>
+    </item>
+    
+  </channel>
+</rss>

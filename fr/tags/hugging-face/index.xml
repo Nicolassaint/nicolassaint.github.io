@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Hugging Face 🤗 on Nicolas Saint</title>
+    <link>https://nicolassaint.fr/fr/tags/hugging-face/</link>
+    <description>Recent content in Hugging Face 🤗 on Nicolas Saint</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language><atom:link href="https://nicolassaint.fr/fr/tags/hugging-face/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tableau de bord d&#39;analyse de sentiment avec apprentissage automatique</title>
+      <link>https://nicolassaint.fr/fr/projects/etna/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nicolassaint.fr/fr/projects/etna/</guid>
+      <description>Tableau de bord interactif pour l&amp;#39;analyse des données de satisfaction des employés au Ministère de l&amp;#39;Économie et des Finances</description>
+    </item>
+    
+    <item>
+      <title>Stagiaire Data Scientist (IA &amp; LLM)</title>
+      <link>https://nicolassaint.fr/fr/experience/bercy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nicolassaint.fr/fr/experience/bercy/</guid>
+      <description>Ministère de l&amp;#39;Économie et des Finances | Paris, France</description>
+    </item>
+    
+    <item>
+      <title>Chat avec l&#39;assistant IA de Nicolas</title>
+      <link>https://nicolassaint.fr/fr/chat/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nicolassaint.fr/fr/chat/</guid>
+      <description>Chat with our AI Assistant</description>
+    </item>
+    
+  </channel>
+</rss>
