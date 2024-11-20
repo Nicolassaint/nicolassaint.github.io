@@ -74,6 +74,18 @@
                 href="https://nicolassaint.fr/fr/education/polytechnique/"
                 />
   </url><url>
+    <loc>https://nicolassaint.fr/fr/experience/bercy_cdd/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://nicolassaint.fr/en/experience/bercy_cdd/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-fr"
+                href="https://nicolassaint.fr/fr/experience/bercy_cdd/"
+                />
+  </url><url>
     <loc>https://nicolassaint.fr/fr/education/ece/</loc>
     <xhtml:link
                 rel="alternate"
@@ -86,17 +98,7 @@
                 href="https://nicolassaint.fr/fr/education/ece/"
                 />
   </url><url>
-    <loc>https://nicolassaint.fr/fr/experience/bercy/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en-us"
-                href="https://nicolassaint.fr/en/experience/bercy/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr-fr"
-                href="https://nicolassaint.fr/fr/experience/bercy/"
-                />
+    <loc>https://nicolassaint.fr/fr/experience/bercy_stage/</loc>
   </url><url>
     <loc>https://nicolassaint.fr/fr/experience/devoteam/</loc>
     <xhtml:link

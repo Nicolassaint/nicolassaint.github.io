@@ -74,17 +74,19 @@
                 href="https://nicolassaint.fr/en/education/polytechnique/"
                 />
   </url><url>
-    <loc>https://nicolassaint.fr/en/experience/bercy/</loc>
+    <loc>https://nicolassaint.fr/en/experience/bercy_cdd/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-fr"
-                href="https://nicolassaint.fr/fr/experience/bercy/"
+                href="https://nicolassaint.fr/fr/experience/bercy_cdd/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://nicolassaint.fr/en/experience/bercy/"
+                href="https://nicolassaint.fr/en/experience/bercy_cdd/"
                 />
+  </url><url>
+    <loc>https://nicolassaint.fr/en/experience/bercy/</loc>
   </url><url>
     <loc>https://nicolassaint.fr/en/education/ece/</loc>
     <xhtml:link
