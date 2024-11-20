@@ -1,7 +1,7 @@
 ---
 title: "Stagiaire Data Scientist (IA & LLM)"
 description: "Ministère de l'Économie et des Finances | Paris, France"
-dateString: Avril 2024 - Présent
+dateString: Avril 2024 - Octobre 2024
 draft: false
 tags: ["Python", "LLM", "Intelligence Artificielle", "ML", "NLP", "RAG", "LangChain", "Streamlit", "Hugging Face 🤗"]
 showToc: false

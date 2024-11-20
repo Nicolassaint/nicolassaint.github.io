@@ -1,7 +1,7 @@
 ---
 title: "Data Scientist - IA générative"
 description: "Ministère de l'Économie et des Finances | Paris, France"
-dateString: Mai 2024 - Présent
+dateString: Novembre 2024 - Présent
 draft: false
 tags: ["Python", "LLM", "Intelligence Artificielle", "ML", "NLP", "RAG", "LangChain", "Streamlit", "Hugging Face 🤗"]
 showToc: false

@@ -1,7 +1,7 @@
 ---
 title: "Data Scientist - Generative AI"
 description: "Ministry of Economy and Finance | Paris, France"
-dateString: May 2024 - Present
+dateString: November 2024 - Present
 draft: false
 tags: ["Python", "LLM", "Artificial Intelligence", "ML", "NLP", "RAG", "LangChain", "Streamlit", "Hugging Face 🤗"]
 showToc: false
