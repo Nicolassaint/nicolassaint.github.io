@@ -64,7 +64,7 @@ languages:
       profileMode:
         enabled: true
         title: "Nicolas Saint"
-        subtitle: "Bonjour 👋 Je suis Nicolas, un passionné de technologie et d'IA open-source 🤗, enthousiaste à l'idée de résoudre des problèmes complexes. En tant que stagiaire Data Scientist au [**Ministère de l'Économie et des Finances**](https://www.economie.gouv.fr/), je développe des outils d'IA robustes, souverains et respectueux des données privées (chatbots, systèmes RAG, outils de résumé...) pour le gouvernement français en utilisant des modèles open-source à l'état de l'art."
+        subtitle: "Bonjour 👋 Je suis Nicolas, un passionné de technologie et d'IA open-source 🤗, enthousiaste à l'idée de résoudre des problèmes complexes. En tant que Data Scientist au [**Ministère de l'Économie et des Finances**](https://www.economie.gouv.fr/), je développe des outils d'IA robustes, souverains et respectueux des données privées (chatbots, systèmes RAG, outils de résumé...) pour le gouvernement français en utilisant des modèles open-source à l'état de l'art."
         imageUrl: "home/nicolassaint-london.jpg"
         imageWidth: 220
         imageHeight: 220
