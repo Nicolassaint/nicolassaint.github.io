@@ -70,7 +70,7 @@ languages:
         imageHeight: 220
         buttons:
           - name: "CV"
-            url: "https://drive.google.com/file/d/1tIEjer-gTrKwKipt7h65y3tN4NgUV09d/view"
+            url: "https://drive.google.com/file/d/1dxhC_cC5uo-Zqkl8vhh4v0PEPVQfWUoh/view"
     menu:
       main:
         - identifier: home
