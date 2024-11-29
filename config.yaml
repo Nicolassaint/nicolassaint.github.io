@@ -20,7 +20,7 @@ languages:
       profileMode:
         enabled: true
         title: "Nicolas Saint"
-        subtitle: "Hi 👋 I'm Nicolas, a tech and open-source AI 🤗 enthusiast passionate about solving complex problems. As a Data Science intern at the [**Ministry of Economy and Finance**](https://www.economie.gouv.fr/), I'm developing robust, sovereign, and privacy-focused AI tools (chatbots, RAG systems, summarization tools...) for the French government using state-of-the-art open-source models."
+        subtitle: "Hi 👋 I'm Nicolas, a tech and open-source AI 🤗 enthusiast passionate about solving complex problems. As a Data Scientist at the [**Ministry of Economy and Finance**](https://www.economie.gouv.fr/), I'm developing robust, sovereign, and privacy-focused AI tools (chatbots, RAG systems, summarization tools...) for the French government using state-of-the-art open-source models."
         imageUrl: "home/nicolassaint-london.jpg"
         imageWidth: 220
         imageHeight: 220
