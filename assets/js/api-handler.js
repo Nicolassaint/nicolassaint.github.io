@@ -30,8 +30,10 @@ class APIHandler {
             const response = await fetch(this.apiUrl + '/.netlify/functions/sendMessage', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'Origin': window.location.origin
                 },
+                credentials: 'include',
                 body: JSON.stringify({
                     userMessage: userMessage,
                     language: this.language,
