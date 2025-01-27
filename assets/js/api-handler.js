@@ -31,6 +31,7 @@ class APIHandler {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
+                    'Accept': 'text/event-stream',
                     'Origin': window.location.origin
                 },
                 credentials: 'include',
@@ -45,43 +46,27 @@ class APIHandler {
                 throw new Error(`Erreur d'appel API : ${response.status} ${response.statusText}`);
             }
 
-            // Gestion du streaming
             const reader = response.body.getReader();
             const decoder = new TextDecoder();
 
             while (true) {
-                const { done, value } = await reader.read();
+                const { value, done } = await reader.read();
                 if (done) break;
-
+                
                 const chunk = decoder.decode(value);
-                const lines = chunk.split('\n');
-
-                for (const line of lines) {
-                    if (line.startsWith('data: ')) {
-                        const jsonData = line.slice(6);
-                        if (jsonData === '[DONE]') continue;
-
-                        try {
-                            const data = JSON.parse(jsonData);
-                            const content = data.choices[0]?.delta?.content || '';
-                            fullResponse += content;
-                            
-                            // Émettre un événement pour chaque nouveau morceau de texte
-                            const streamEvent = new CustomEvent('stream-update', {
-                                detail: { content: fullResponse }
-                            });
-                            window.dispatchEvent(streamEvent);
-                        } catch (e) {
-                            console.error('Erreur parsing JSON:', e);
-                        }
-                    }
-                }
+                fullResponse += chunk;
+                
+                // Émettre un événement pour chaque morceau reçu
+                const streamEvent = new CustomEvent('stream-update', {
+                    detail: { content: fullResponse }
+                });
+                window.dispatchEvent(streamEvent);
             }
 
             // Stockage de la conversation dans Supabase
             await this.storeConversation(userMessage, fullResponse);
 
-            // Ajout de l'historique des messages côté frontend
+            // Ajout de l'historique des messages
             this.promptManager.addToHistory('user', userMessage);
             this.promptManager.addToHistory('assistant', fullResponse);
 
