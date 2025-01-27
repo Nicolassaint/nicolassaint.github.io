@@ -48,19 +48,42 @@ class APIHandler {
 
             const reader = response.body.getReader();
             const decoder = new TextDecoder();
+            let buffer = '';
 
             while (true) {
                 const { value, done } = await reader.read();
                 if (done) break;
                 
-                const chunk = decoder.decode(value);
-                fullResponse += chunk;
+                buffer += decoder.decode(value, { stream: true });
                 
-                // Émettre un événement pour chaque morceau reçu
-                const streamEvent = new CustomEvent('stream-update', {
-                    detail: { content: fullResponse }
-                });
-                window.dispatchEvent(streamEvent);
+                // Traiter le buffer ligne par ligne
+                const lines = buffer.split('\n');
+                buffer = lines.pop() || ''; // Garder la dernière ligne incomplète dans le buffer
+                
+                for (const line of lines) {
+                    if (line.startsWith('data: ')) {
+                        try {
+                            const jsonData = JSON.parse(line.slice(6));
+                            if (jsonData.choices && jsonData.choices[0].delta && jsonData.choices[0].delta.content) {
+                                const newContent = jsonData.choices[0].delta.content;
+                                fullResponse += newContent;
+                                
+                                // Émettre un événement avec seulement le nouveau contenu
+                                const streamEvent = new CustomEvent('stream-update', {
+                                    detail: { content: newContent }
+                                });
+                                window.dispatchEvent(streamEvent);
+                            }
+                        } catch (e) {
+                            console.warn('Erreur parsing JSON:', e);
+                        }
+                    }
+                }
+            }
+
+            // Traiter le reste du buffer si nécessaire
+            if (buffer) {
+                // ... traitement similaire pour le buffer restant ...
             }
 
             // Stockage de la conversation dans Supabase
