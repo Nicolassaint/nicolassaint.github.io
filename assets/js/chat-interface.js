@@ -43,14 +43,60 @@ document.addEventListener("DOMContentLoaded", function () {
         const userMessage = userInput.value.trim();
         if (!userMessage) return;
 
+        // Créer le message de l'utilisateur
         addMessage(userMessage, true);
         userInput.value = "";
         showTypingIndicator();
 
         try {
-            const response = await apiHandler.sendMessage(userMessage);
+            const botMessageDiv = document.createElement("div");
+            botMessageDiv.className = 'message bot-message';
+            botMessageDiv.innerHTML = '<div class="message-content"></div>';
+            chatBox.insertBefore(botMessageDiv, typingIndicator);
+
+            let isUserScrolling = false;
+            let lastScrollTop = chatBox.scrollTop;
+
+            // Amélioration de la détection du scroll
+            let scrollTimeout;
+            chatBox.addEventListener('scroll', () => {
+                if (chatBox.scrollTop !== lastScrollTop) {
+                    isUserScrolling = true;
+                    clearTimeout(scrollTimeout);
+                    scrollTimeout = setTimeout(() => {
+                        const scrollBottom = chatBox.scrollTop + chatBox.clientHeight;
+                        const isNearBottom = chatBox.scrollHeight - scrollBottom < 100;
+                        if (isNearBottom) {
+                            isUserScrolling = false;
+                        }
+                    }, 150); // Réduit à 150ms pour une meilleure réactivité
+                }
+                lastScrollTop = chatBox.scrollTop;
+            });
+
+            const streamUpdateHandler = (event) => {
+                hideTypingIndicator();
+                const messageContent = botMessageDiv.querySelector('.message-content');
+                messageContent.innerHTML = marked.parse(event.detail.content);
+                
+                // Amélioration de la logique de scroll
+                if (!isUserScrolling) {
+                    const scrollBottom = chatBox.scrollTop + chatBox.clientHeight;
+                    const isNearBottom = chatBox.scrollHeight - scrollBottom < 100;
+                    
+                    if (isNearBottom) {
+                        requestAnimationFrame(() => {
+                            chatBox.scrollTop = chatBox.scrollHeight - chatBox.clientHeight;
+                        });
+                    }
+                }
+            };
+
+            window.addEventListener('stream-update', streamUpdateHandler);
+            await apiHandler.sendMessage(userMessage);
+            window.removeEventListener('stream-update', streamUpdateHandler);
             hideTypingIndicator();
-            addMessage(response);
+
         } catch (error) {
             console.error('=== Error details ===');
             console.error(error);
@@ -126,19 +172,67 @@ function initChatInterface(apiHandler) {
         const userMessage = userInput.value.trim();
         if (!userMessage) return;
 
+        // Créer le message de l'utilisateur
         addMessage(userMessage, true);
         userInput.value = "";
         showTypingIndicator();
 
         try {
-            const response = await apiHandler.sendMessage(userMessage);
+            const botMessageDiv = document.createElement("div");
+            botMessageDiv.className = 'message bot-message';
+            botMessageDiv.innerHTML = '<div class="message-content"></div>';
+            chatBox.insertBefore(botMessageDiv, typingIndicator);
+
+            let isUserScrolling = false;
+            let lastScrollTop = chatBox.scrollTop;
+
+            // Amélioration de la détection du scroll
+            let scrollTimeout;
+            chatBox.addEventListener('scroll', () => {
+                if (chatBox.scrollTop !== lastScrollTop) {
+                    isUserScrolling = true;
+                    clearTimeout(scrollTimeout);
+                    scrollTimeout = setTimeout(() => {
+                        const scrollBottom = chatBox.scrollTop + chatBox.clientHeight;
+                        const isNearBottom = chatBox.scrollHeight - scrollBottom < 100;
+                        if (isNearBottom) {
+                            isUserScrolling = false;
+                        }
+                    }, 150); // Réduit à 150ms pour une meilleure réactivité
+                }
+                lastScrollTop = chatBox.scrollTop;
+            });
+
+            const streamUpdateHandler = (event) => {
+                hideTypingIndicator();
+                const messageContent = botMessageDiv.querySelector('.message-content');
+                messageContent.innerHTML = marked.parse(event.detail.content);
+                
+                // Amélioration de la logique de scroll
+                if (!isUserScrolling) {
+                    const scrollBottom = chatBox.scrollTop + chatBox.clientHeight;
+                    const isNearBottom = chatBox.scrollHeight - scrollBottom < 100;
+                    
+                    if (isNearBottom) {
+                        requestAnimationFrame(() => {
+                            chatBox.scrollTop = chatBox.scrollHeight - chatBox.clientHeight;
+                        });
+                    }
+                }
+            };
+
+            window.addEventListener('stream-update', streamUpdateHandler);
+            await apiHandler.sendMessage(userMessage);
+            window.removeEventListener('stream-update', streamUpdateHandler);
             hideTypingIndicator();
-            addMessage(response);
+
         } catch (error) {
             console.error('=== Error details ===');
             console.error(error);
             hideTypingIndicator();
             addMessage(`Error: ${error.message}`, false, true);
+        } finally {
+            updateSendButtonState(false);
         }
     }
 
