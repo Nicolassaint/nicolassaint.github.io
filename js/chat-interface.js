@@ -77,18 +77,33 @@ document.addEventListener("DOMContentLoaded", function () {
             const streamUpdateHandler = (event) => {
                 hideTypingIndicator();
                 const messageContent = botMessageDiv.querySelector('.message-content');
-                messageContent.innerHTML = marked.parse(event.detail.content);
                 
-                // Amélioration de la logique de scroll
-                if (!isUserScrolling) {
-                    const scrollBottom = chatBox.scrollTop + chatBox.clientHeight;
-                    const isNearBottom = chatBox.scrollHeight - scrollBottom < 100;
-                    
-                    if (isNearBottom) {
-                        requestAnimationFrame(() => {
-                            chatBox.scrollTop = chatBox.scrollHeight - chatBox.clientHeight;
-                        });
+                try {
+                    // Initialiser fullContent s'il n'existe pas
+                    if (!botMessageDiv.fullContent) {
+                        botMessageDiv.fullContent = '';
                     }
+                    
+                    // Ajouter seulement le nouveau contenu
+                    botMessageDiv.fullContent += event.detail.content;
+                    
+                    // Afficher le contenu mis à jour
+                    messageContent.innerHTML = marked.parse(botMessageDiv.fullContent);
+                    
+                    // Scroll logic
+                    if (!isUserScrolling) {
+                        const scrollBottom = chatBox.scrollTop + chatBox.clientHeight;
+                        const isNearBottom = chatBox.scrollHeight - scrollBottom < 100;
+                        
+                        if (isNearBottom) {
+                            requestAnimationFrame(() => {
+                                chatBox.scrollTop = chatBox.scrollHeight - chatBox.clientHeight;
+                            });
+                        }
+                    }
+                } catch (e) {
+                    console.warn('Erreur parsing streaming:', e);
+                    console.warn('Contenu reçu:', event.detail.content);
                 }
             };
 
@@ -206,18 +221,33 @@ function initChatInterface(apiHandler) {
             const streamUpdateHandler = (event) => {
                 hideTypingIndicator();
                 const messageContent = botMessageDiv.querySelector('.message-content');
-                messageContent.innerHTML = marked.parse(event.detail.content);
                 
-                // Amélioration de la logique de scroll
-                if (!isUserScrolling) {
-                    const scrollBottom = chatBox.scrollTop + chatBox.clientHeight;
-                    const isNearBottom = chatBox.scrollHeight - scrollBottom < 100;
-                    
-                    if (isNearBottom) {
-                        requestAnimationFrame(() => {
-                            chatBox.scrollTop = chatBox.scrollHeight - chatBox.clientHeight;
-                        });
+                try {
+                    // Initialiser fullContent s'il n'existe pas
+                    if (!botMessageDiv.fullContent) {
+                        botMessageDiv.fullContent = '';
                     }
+                    
+                    // Ajouter seulement le nouveau contenu
+                    botMessageDiv.fullContent += event.detail.content;
+                    
+                    // Afficher le contenu mis à jour
+                    messageContent.innerHTML = marked.parse(botMessageDiv.fullContent);
+                    
+                    // Scroll logic
+                    if (!isUserScrolling) {
+                        const scrollBottom = chatBox.scrollTop + chatBox.clientHeight;
+                        const isNearBottom = chatBox.scrollHeight - scrollBottom < 100;
+                        
+                        if (isNearBottom) {
+                            requestAnimationFrame(() => {
+                                chatBox.scrollTop = chatBox.scrollHeight - chatBox.clientHeight;
+                            });
+                        }
+                    }
+                } catch (e) {
+                    console.warn('Erreur parsing streaming:', e);
+                    console.warn('Contenu reçu:', event.detail.content);
                 }
             };
 
