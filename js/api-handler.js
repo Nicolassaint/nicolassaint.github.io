@@ -31,10 +31,9 @@ class APIHandler {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Accept': 'text/event-stream',
-                    'Origin': window.location.origin
+                    'Accept': 'text/event-stream'
                 },
-                credentials: 'include',
+                credentials: this.environment === 'dev' ? 'include' : 'same-origin',
                 body: JSON.stringify({
                     userMessage: userMessage,
                     language: this.language,
@@ -43,7 +42,8 @@ class APIHandler {
             });
 
             if (!response.ok) {
-                throw new Error(`Erreur d'appel API : ${response.status} ${response.statusText}`);
+                const errorText = await response.text();
+                throw new Error(`API Error (${response.status}): ${errorText}`);
             }
 
             const reader = response.body.getReader();
@@ -95,7 +95,13 @@ class APIHandler {
 
             return fullResponse;
         } catch (error) {
-            console.error('Erreur lors de l\'appel au Backend:', error);
+            console.error('Backend call error:', error);
+            console.error('Error details:', {
+                environment: this.environment,
+                apiUrl: this.apiUrl,
+                status: error.response?.status,
+                headers: error.response?.headers
+            });
             throw error;
         }
     }
@@ -107,6 +113,7 @@ class APIHandler {
                 headers: {
                     'Content-Type': 'application/json'
                 },
+                credentials: this.environment === 'dev' ? 'include' : 'same-origin',
                 body: JSON.stringify({
                     userMessage: userMessage,
                     assistantResponse: assistantResponse,
@@ -116,10 +123,10 @@ class APIHandler {
             });
 
             if (!response.ok) {
-                console.error('Erreur de stockage:', response.status, response.statusText);
+                throw new Error(`Storage error: ${response.status} ${response.statusText}`);
             }
         } catch (error) {
-            console.error('Erreur lors de l\'appel à Netlify:', error);
+            console.error('Netlify call error:', error);
         }
     }
 }
