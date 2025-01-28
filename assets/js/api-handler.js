@@ -62,8 +62,15 @@ class APIHandler {
                 
                 for (const line of lines) {
                     if (line.startsWith('data: ')) {
+                        const data = line.slice(6);
+                        
+                        // Ignorer le message [DONE]
+                        if (data.trim() === '[DONE]') {
+                            continue;
+                        }
+                        
                         try {
-                            const jsonData = JSON.parse(line.slice(6));
+                            const jsonData = JSON.parse(data);
                             if (jsonData.choices && jsonData.choices[0].delta && jsonData.choices[0].delta.content) {
                                 const newContent = jsonData.choices[0].delta.content;
                                 fullResponse += newContent;
