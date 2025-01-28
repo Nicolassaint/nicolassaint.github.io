@@ -33,7 +33,7 @@ class APIHandler {
                     'Content-Type': 'application/json',
                     'Accept': 'text/event-stream'
                 },
-                credentials: this.environment === 'dev' ? 'include' : 'same-origin',
+                credentials: 'include',
                 body: JSON.stringify({
                     userMessage: userMessage,
                     language: this.language,
