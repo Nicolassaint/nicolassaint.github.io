@@ -31,7 +31,8 @@ class APIHandler {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Accept': 'text/event-stream'
+                    'Accept': 'text/event-stream',
+                    'Origin': window.location.origin
                 },
                 credentials: 'include',
                 body: JSON.stringify({
@@ -42,8 +43,7 @@ class APIHandler {
             });
 
             if (!response.ok) {
-                const errorText = await response.text();
-                throw new Error(`API Error (${response.status}): ${errorText}`);
+                throw new Error(`Erreur d'appel API : ${response.status} ${response.statusText}`);
             }
 
             const reader = response.body.getReader();
@@ -62,8 +62,15 @@ class APIHandler {
                 
                 for (const line of lines) {
                     if (line.startsWith('data: ')) {
+                        const data = line.slice(6);
+                        
+                        // Ignorer le message [DONE]
+                        if (data.trim() === '[DONE]') {
+                            continue;
+                        }
+                        
                         try {
-                            const jsonData = JSON.parse(line.slice(6));
+                            const jsonData = JSON.parse(data);
                             if (jsonData.choices && jsonData.choices[0].delta && jsonData.choices[0].delta.content) {
                                 const newContent = jsonData.choices[0].delta.content;
                                 fullResponse += newContent;
@@ -95,13 +102,7 @@ class APIHandler {
 
             return fullResponse;
         } catch (error) {
-            console.error('Backend call error:', error);
-            console.error('Error details:', {
-                environment: this.environment,
-                apiUrl: this.apiUrl,
-                status: error.response?.status,
-                headers: error.response?.headers
-            });
+            console.error('Erreur lors de l\'appel au Backend:', error);
             throw error;
         }
     }
@@ -113,7 +114,6 @@ class APIHandler {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                credentials: this.environment === 'dev' ? 'include' : 'same-origin',
                 body: JSON.stringify({
                     userMessage: userMessage,
                     assistantResponse: assistantResponse,
@@ -123,10 +123,10 @@ class APIHandler {
             });
 
             if (!response.ok) {
-                throw new Error(`Storage error: ${response.status} ${response.statusText}`);
+                console.error('Erreur de stockage:', response.status, response.statusText);
             }
         } catch (error) {
-            console.error('Netlify call error:', error);
+            console.error('Erreur lors de l\'appel à Netlify:', error);
         }
     }
 }
