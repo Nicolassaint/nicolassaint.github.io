@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Manually scroll to show a bit of the previous message
         const previousMessageHeight = messageDiv.previousElementSibling
-        ? messageDiv.previousElementSibling.offsetHeight
-        : 0;
+            ? messageDiv.previousElementSibling.offsetHeight
+            : 0;
         const padding = 250; // Adjust the padding to show part of the previous message
         chatBox.scrollTop = messageDiv.offsetTop - previousMessageHeight - padding;
     }
@@ -43,75 +43,14 @@ document.addEventListener("DOMContentLoaded", function () {
         const userMessage = userInput.value.trim();
         if (!userMessage) return;
 
-        // Créer le message de l'utilisateur
         addMessage(userMessage, true);
         userInput.value = "";
         showTypingIndicator();
 
         try {
-            const botMessageDiv = document.createElement("div");
-            botMessageDiv.className = 'message bot-message';
-            botMessageDiv.innerHTML = '<div class="message-content"></div>';
-            chatBox.insertBefore(botMessageDiv, typingIndicator);
-
-            let isUserScrolling = false;
-            let lastScrollTop = chatBox.scrollTop;
-
-            // Amélioration de la détection du scroll
-            let scrollTimeout;
-            chatBox.addEventListener('scroll', () => {
-                if (chatBox.scrollTop !== lastScrollTop) {
-                    isUserScrolling = true;
-                    clearTimeout(scrollTimeout);
-                    scrollTimeout = setTimeout(() => {
-                        const scrollBottom = chatBox.scrollTop + chatBox.clientHeight;
-                        const isNearBottom = chatBox.scrollHeight - scrollBottom < 100;
-                        if (isNearBottom) {
-                            isUserScrolling = false;
-                        }
-                    }, 150); // Réduit à 150ms pour une meilleure réactivité
-                }
-                lastScrollTop = chatBox.scrollTop;
-            });
-
-            const streamUpdateHandler = (event) => {
-                hideTypingIndicator();
-                const messageContent = botMessageDiv.querySelector('.message-content');
-                
-                try {
-                    // Initialiser fullContent s'il n'existe pas
-                    if (!botMessageDiv.fullContent) {
-                        botMessageDiv.fullContent = '';
-                    }
-                    
-                    // Ajouter seulement le nouveau contenu
-                    botMessageDiv.fullContent += event.detail.content;
-                    
-                    // Afficher le contenu mis à jour
-                    messageContent.innerHTML = marked.parse(botMessageDiv.fullContent);
-                    
-                    // Scroll logic
-                    if (!isUserScrolling) {
-                        const scrollBottom = chatBox.scrollTop + chatBox.clientHeight;
-                        const isNearBottom = chatBox.scrollHeight - scrollBottom < 100;
-                        
-                        if (isNearBottom) {
-                            requestAnimationFrame(() => {
-                                chatBox.scrollTop = chatBox.scrollHeight - chatBox.clientHeight;
-                            });
-                        }
-                    }
-                } catch (e) {
-                    console.warn('Erreur parsing streaming:', e);
-                    console.warn('Contenu reçu:', event.detail.content);
-                }
-            };
-
-            window.addEventListener('stream-update', streamUpdateHandler);
-            await apiHandler.sendMessage(userMessage);
-            window.removeEventListener('stream-update', streamUpdateHandler);
+            const response = await apiHandler.sendMessage(userMessage);
             hideTypingIndicator();
-
+            addMessage(response, false);
         } catch (error) {
             console.error('=== Error details ===');
             console.error(error);
@@ -168,8 +107,8 @@ function initChatInterface(apiHandler) {
 
         // Manually scroll to show a bit of the previous message
         const previousMessageHeight = messageDiv.previousElementSibling
-        ? messageDiv.previousElementSibling.offsetHeight
-        : 0;
+            ? messageDiv.previousElementSibling.offsetHeight
+            : 0;
         const padding = 250; // Adjust the padding to show part of the previous message
         chatBox.scrollTop = messageDiv.offsetTop - previousMessageHeight - padding;
     }
@@ -187,82 +126,19 @@ function initChatInterface(apiHandler) {
         const userMessage = userInput.value.trim();
         if (!userMessage) return;
 
-        // Créer le message de l'utilisateur
         addMessage(userMessage, true);
         userInput.value = "";
         showTypingIndicator();
 
         try {
-            const botMessageDiv = document.createElement("div");
-            botMessageDiv.className = 'message bot-message';
-            botMessageDiv.innerHTML = '<div class="message-content"></div>';
-            chatBox.insertBefore(botMessageDiv, typingIndicator);
-
-            let isUserScrolling = false;
-            let lastScrollTop = chatBox.scrollTop;
-
-            // Amélioration de la détection du scroll
-            let scrollTimeout;
-            chatBox.addEventListener('scroll', () => {
-                if (chatBox.scrollTop !== lastScrollTop) {
-                    isUserScrolling = true;
-                    clearTimeout(scrollTimeout);
-                    scrollTimeout = setTimeout(() => {
-                        const scrollBottom = chatBox.scrollTop + chatBox.clientHeight;
-                        const isNearBottom = chatBox.scrollHeight - scrollBottom < 100;
-                        if (isNearBottom) {
-                            isUserScrolling = false;
-                        }
-                    }, 150); // Réduit à 150ms pour une meilleure réactivité
-                }
-                lastScrollTop = chatBox.scrollTop;
-            });
-
-            const streamUpdateHandler = (event) => {
-                hideTypingIndicator();
-                const messageContent = botMessageDiv.querySelector('.message-content');
-                
-                try {
-                    // Initialiser fullContent s'il n'existe pas
-                    if (!botMessageDiv.fullContent) {
-                        botMessageDiv.fullContent = '';
-                    }
-                    
-                    // Ajouter seulement le nouveau contenu
-                    botMessageDiv.fullContent += event.detail.content;
-                    
-                    // Afficher le contenu mis à jour
-                    messageContent.innerHTML = marked.parse(botMessageDiv.fullContent);
-                    
-                    // Scroll logic
-                    if (!isUserScrolling) {
-                        const scrollBottom = chatBox.scrollTop + chatBox.clientHeight;
-                        const isNearBottom = chatBox.scrollHeight - scrollBottom < 100;
-                        
-                        if (isNearBottom) {
-                            requestAnimationFrame(() => {
-                                chatBox.scrollTop = chatBox.scrollHeight - chatBox.clientHeight;
-                            });
-                        }
-                    }
-                } catch (e) {
-                    console.warn('Erreur parsing streaming:', e);
-                    console.warn('Contenu reçu:', event.detail.content);
-                }
-            };
-
-            window.addEventListener('stream-update', streamUpdateHandler);
-            await apiHandler.sendMessage(userMessage);
-            window.removeEventListener('stream-update', streamUpdateHandler);
+            const response = await apiHandler.sendMessage(userMessage);
             hideTypingIndicator();
-
+            addMessage(response, false);
         } catch (error) {
             console.error('=== Error details ===');
             console.error(error);
             hideTypingIndicator();
             addMessage(`Error: ${error.message}`, false, true);
-        } finally {
-            updateSendButtonState(false);
         }
     }
 

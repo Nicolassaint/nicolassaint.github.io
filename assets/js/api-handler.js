@@ -24,14 +24,12 @@ class APIHandler {
 
     async sendMessage(userMessage) {
         const conversationHistory = this.promptManager.getConversationHistory();
-        let fullResponse = '';
 
         try {
             const response = await fetch(this.apiUrl + '/.netlify/functions/sendMessage', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Accept': 'text/event-stream',
                     'Origin': window.location.origin
                 },
                 credentials: 'include',
@@ -46,61 +44,17 @@ class APIHandler {
                 throw new Error(`Erreur d'appel API : ${response.status} ${response.statusText}`);
             }
 
-            const reader = response.body.getReader();
-            const decoder = new TextDecoder();
-            let buffer = '';
-
-            while (true) {
-                const { value, done } = await reader.read();
-                if (done) break;
-                
-                buffer += decoder.decode(value, { stream: true });
-                
-                // Traiter le buffer ligne par ligne
-                const lines = buffer.split('\n');
-                buffer = lines.pop() || ''; // Garder la dernière ligne incomplète dans le buffer
-                
-                for (const line of lines) {
-                    if (line.startsWith('data: ')) {
-                        const data = line.slice(6);
-                        
-                        // Ignorer le message [DONE]
-                        if (data.trim() === '[DONE]') {
-                            continue;
-                        }
-                        
-                        try {
-                            const jsonData = JSON.parse(data);
-                            if (jsonData.choices && jsonData.choices[0].delta && jsonData.choices[0].delta.content) {
-                                const newContent = jsonData.choices[0].delta.content;
-                                fullResponse += newContent;
-                                
-                                // Émettre un événement avec seulement le nouveau contenu
-                                const streamEvent = new CustomEvent('stream-update', {
-                                    detail: { content: newContent }
-                                });
-                                window.dispatchEvent(streamEvent);
-                            }
-                        } catch (e) {
-                            console.warn('Erreur parsing JSON:', e);
-                        }
-                    }
-                }
-            }
-
-            // Traiter le reste du buffer si nécessaire
-            if (buffer) {
-                // ... traitement similaire pour le buffer restant ...
-            }
+            const data = await response.json();
+            const assistantResponse = data.message;
 
             // Stockage de la conversation dans Supabase
-            await this.storeConversation(userMessage, fullResponse);
+            await this.storeConversation(userMessage, assistantResponse);
 
             // Ajout de l'historique des messages
             this.promptManager.addToHistory('user', userMessage);
-            this.promptManager.addToHistory('assistant', fullResponse);
+            this.promptManager.addToHistory('assistant', assistantResponse);
 
-            return fullResponse;
+            return assistantResponse;
         } catch (error) {
             console.error('Erreur lors de l\'appel au Backend:', error);
             throw error;
