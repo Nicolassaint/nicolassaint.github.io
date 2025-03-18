@@ -2,6 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://nicolassaint.fr/fr/projects/osi/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://nicolassaint.fr/en/projects/osi/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-fr"
+                href="https://nicolassaint.fr/fr/projects/osi/"
+                />
+  </url><url>
     <loc>https://nicolassaint.fr/fr/projects/olympia/</loc>
     <xhtml:link
                 rel="alternate"
@@ -172,6 +184,8 @@
                 href="https://nicolassaint.fr/fr/tags/ai/"
                 />
   </url><url>
+    <loc>https://nicolassaint.fr/fr/tags/api-rest/</loc>
+  </url><url>
     <loc>https://nicolassaint.fr/fr/tags/audit/</loc>
     <xhtml:link
                 rel="alternate"
@@ -246,6 +260,18 @@
                 href="https://nicolassaint.fr/fr/tags/dl/"
                 />
   </url><url>
+    <loc>https://nicolassaint.fr/fr/tags/docker/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://nicolassaint.fr/en/tags/docker/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-fr"
+                href="https://nicolassaint.fr/fr/tags/docker/"
+                />
+  </url><url>
     <loc>https://nicolassaint.fr/fr/tags/donn%C3%A9es/</loc>
   </url><url>
     <loc>https://nicolassaint.fr/fr/tags/excel/</loc>
@@ -270,6 +296,18 @@
                 rel="alternate"
                 hreflang="fr-fr"
                 href="https://nicolassaint.fr/fr/experience/"
+                />
+  </url><url>
+    <loc>https://nicolassaint.fr/fr/tags/faiss/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://nicolassaint.fr/en/tags/faiss/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-fr"
+                href="https://nicolassaint.fr/fr/tags/faiss/"
                 />
   </url><url>
     <loc>https://nicolassaint.fr/fr/tags/fastapi/</loc>
@@ -460,6 +498,30 @@
                 rel="alternate"
                 hreflang="fr-fr"
                 href="https://nicolassaint.fr/fr/tags/ml/"
+                />
+  </url><url>
+    <loc>https://nicolassaint.fr/fr/tags/mongodb/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://nicolassaint.fr/en/tags/mongodb/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-fr"
+                href="https://nicolassaint.fr/fr/tags/mongodb/"
+                />
+  </url><url>
+    <loc>https://nicolassaint.fr/fr/tags/next.js/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://nicolassaint.fr/en/tags/next.js/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-fr"
+                href="https://nicolassaint.fr/fr/tags/next.js/"
                 />
   </url><url>
     <loc>https://nicolassaint.fr/fr/</loc>
@@ -660,6 +722,18 @@
                 rel="alternate"
                 hreflang="fr-fr"
                 href="https://nicolassaint.fr/fr/tags/web/"
+                />
+  </url><url>
+    <loc>https://nicolassaint.fr/fr/tags/websocket/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://nicolassaint.fr/en/tags/websocket/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-fr"
+                href="https://nicolassaint.fr/fr/tags/websocket/"
                 />
   </url>
 </urlset>

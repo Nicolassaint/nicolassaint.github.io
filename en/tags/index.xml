@@ -124,11 +124,29 @@
     </item>
     
     <item>
+      <title>Docker</title>
+      <link>https://nicolassaint.fr/en/tags/docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nicolassaint.fr/en/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Excel</title>
       <link>https://nicolassaint.fr/en/tags/excel/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://nicolassaint.fr/en/tags/excel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>FAISS</title>
+      <link>https://nicolassaint.fr/en/tags/faiss/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nicolassaint.fr/en/tags/faiss/</guid>
       <description></description>
     </item>
     
@@ -277,6 +295,24 @@
     </item>
     
     <item>
+      <title>MongoDB</title>
+      <link>https://nicolassaint.fr/en/tags/mongodb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nicolassaint.fr/en/tags/mongodb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Next.js</title>
+      <link>https://nicolassaint.fr/en/tags/next.js/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nicolassaint.fr/en/tags/next.js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>NLP</title>
       <link>https://nicolassaint.fr/en/tags/nlp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -349,6 +385,15 @@
     </item>
     
     <item>
+      <title>REST API</title>
+      <link>https://nicolassaint.fr/en/tags/rest-api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nicolassaint.fr/en/tags/rest-api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>S3</title>
       <link>https://nicolassaint.fr/en/tags/s3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -399,6 +444,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://nicolassaint.fr/en/tags/web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WebSocket</title>
+      <link>https://nicolassaint.fr/en/tags/websocket/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nicolassaint.fr/en/tags/websocket/</guid>
       <description></description>
     </item>
     
