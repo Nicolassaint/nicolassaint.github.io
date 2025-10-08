@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>MémoireIA - Automatic proposal memorandum generator | Nicolas Saint</title>
+<meta name="keywords" content="Python, FastAPI, Next.js, AI, LLM, VLM, OCR, MongoDB, MinIO, React, Material UI">
+<meta name="description" content="Intelligent application to automate the generation of proposal memoranda for national decorations">
+<meta name="author" content="">
+<link rel="canonical" href="https://nicolassaint.fr/en/projects/memoireia/">
+<link crossorigin="anonymous" href="https://nicolassaint.fr/assets/css/stylesheet.min.90f8cd76a16e5611bf498f9de89598008bbc1e69e5354f7aaa78834aa0c386ce.css" integrity="sha256-kPjNdqFuVhG/SY&#43;d6JWYAIu8HmnlNU96qniDSqDDhs4=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="https://nicolassaint.fr/assets/js/highlight.min.555af97124d54bb1457985dd081b8f5616a48103aafeb30ac89fde835d65aa6c.js" integrity="sha256-VVr5cSTVS7FFeYXdCBuPVhakgQOq/rMKyJ/eg11lqmw="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://nicolassaint.fr/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://nicolassaint.fr/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://nicolassaint.fr/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://nicolassaint.fr/apple-touch-icon.png">
+<link rel="mask-icon" href="https://nicolassaint.fr/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://nicolassaint.fr/en/projects/memoireia/">
+<link rel="alternate" hreflang="fr" href="https://nicolassaint.fr/fr/projects/memoireia/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="MémoireIA - Automatic proposal memorandum generator" />
+<meta property="og:description" content="Intelligent application to automate the generation of proposal memoranda for national decorations" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nicolassaint.fr/en/projects/memoireia/" />
+<meta property="og:image" content="https://nicolassaint.fr/projects/memoireia/logo.png" /><meta property="article:section" content="projects" />
+
+
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://nicolassaint.fr/projects/memoireia/logo.png" />
+<meta name="twitter:title" content="MémoireIA - Automatic proposal memorandum generator"/>
+<meta name="twitter:description" content="Intelligent application to automate the generation of proposal memoranda for national decorations"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Projects",
+      "item": "https://nicolassaint.fr/en/projects/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "MémoireIA - Automatic proposal memorandum generator",
+      "item": "https://nicolassaint.fr/en/projects/memoireia/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "MémoireIA - Automatic proposal memorandum generator",
+  "name": "MémoireIA - Automatic proposal memorandum generator",
+  "description": "Intelligent application to automate the generation of proposal memoranda for national decorations",
+  "keywords": [
+    "Python", "FastAPI", "Next.js", "AI", "LLM", "VLM", "OCR", "MongoDB", "MinIO", "React", "Material UI"
+  ],
+  "articleBody": "Description MémoireIA revolutionizes the creation of proposal memoranda for the french Legion of Honor and the Order of Merit.\nThis solution fully automates the process - from intelligent analysis of source documents (PDF, DOCX) to the generation of structured memoranda compliant with the official requirements of the Grand Chancellery of the Legion of Honor.\nTechnical Architecture Backend (Python/FastAPI):\nIntelligent extraction via LLM and VLM (advanced OCR) REST API with JWT authentication MongoDB database and MinIO storage Multi-team management with granular permissions Frontend (Next.js/React):\nDSFR interface (French State Design System) Intuitive workflow for import, editing and generation NextAuth authentication and Docker deployment Key Features 📄 Automatic analysis: Intelligent information extraction from PDF/DOCX via LLM and VLM 📝 Compliant generation: Production of memoranda meeting official standards 👥 Multi-team: Secure management with permissions by service ⚡ Time saving: Process reduction from several hours to just a few minutes per memorandum Impact and Recognition MémoireIA transforms a complex administrative process into an automated workflow, ensuring quality and compliance while freeing up valuable time for public servants.\nInitially deployed at the Cabinet Office of MINEFI, the project is experiencing growing success with its adoption by DGE and the Ministry of Interior which are also beginning to use it.\nThe project was presented to and commended by Clara Chappaz, Minister Delegate for Artificial Intelligence and Digital Affairs.\nPhoto credit: Célia Bonnin\nUser Interface Here is an example of a memorandum generated for my own person with my CV as input.\n1. Homepage - Simplicity and efficiency Clean homepage interface allowing to quickly start a new memorandum or access the history of previous work.\n2. Document import - Intuitive drag \u0026 drop Simple upload area with drag \u0026 drop support for PDF and DOCX, with preview of selected files.\n3. Processing in progress - AI process transparency Real-time visualization of AI analysis steps\n4. Generated memorandum As soon as the memorandum is completed, you can access it to verify the data, modify it and then download it.\n5. Information extraction - Structured data Presentation of part of the personal information automatically extracted. The user keeps total control: modification, validation and direct download of the memorandum with all data filled in the associated template.\n6. Background Automatic organization of academic, professional and other activities background.\n7. Service statement - Merit valorization Intelligent generation of the statement motivating the proposal with highlighting of exceptional services rendered. After modifying information, possibility to individually regenerate the statement.\n8. Personalized argument - Decoration justification Development of a synthetic and personalized argument justifying the attribution of the proposed decoration. Like for the statement, individual regeneration possible after adjustments.\nSecurity Secure architecture with encryption, JWT authentication, complete audit trail and data isolation by team.\n",
+  "wordCount" : "450",
+  "inLanguage": "en",
+  "image":"https://nicolassaint.fr/projects/memoireia/logo.png","datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://nicolassaint.fr/en/projects/memoireia/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Nicolas Saint",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://nicolassaint.fr/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+
+<link rel="icon" href="https://nicolassaint.fr/favicon.ico">
+
+<header class="header sticky-header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://nicolassaint.fr/en/" accesskey="h" title="Nicolas Saint (Alt + H)">Nicolas Saint</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                    <li>
+                        <a href="https://nicolassaint.fr/fr/projects/memoireia/" title="Français"
+                            aria-label="Français">
+                            &#x1F1EB;&#x1F1F7;</a>
+                    </li>
+                </ul>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://nicolassaint.fr/en/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://nicolassaint.fr/en/education/" title="Education">
+                    <span>Education</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://nicolassaint.fr/en/experience/" title="Experience">
+                    <span>Experience</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://nicolassaint.fr/en/projects" title="Projects">
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://nicolassaint.fr/en/chat/" title="Chat">
+                    <span>Chat</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://nicolassaint.fr/en/search" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://nicolassaint.fr/en/">Home</a>&nbsp;»&nbsp;<a href="https://nicolassaint.fr/en/projects/">Projects</a></div>
+    <h1 class="post-title">
+      MémoireIA - Automatic proposal memorandum generator
+    </h1>
+    <div class="post-description">
+      Intelligent application to automate the generation of proposal memoranda for national decorations
+    </div>
+    <div class="post-meta">
+
+
+March 2024 - Present
+
+</div>
+  </header> 
+<figure class="entry-cover"><img loading="lazy" src="https://nicolassaint.fr/projects/memoireia/logo.png" alt="">
+        
+</figure>
+  <div class="post-content"><h2 id="description">Description<a hidden class="anchor" aria-hidden="true" href="#description">#</a></h2>
+<p>MémoireIA revolutionizes the creation of proposal memoranda for the french Legion of Honor and the Order of Merit.</p>
+<p>This solution fully automates the process - from intelligent analysis of source documents (PDF, DOCX) to the generation of structured memoranda compliant with the official requirements of the Grand Chancellery of the Legion of Honor.</p>
+<h2 id="technical-architecture">Technical Architecture<a hidden class="anchor" aria-hidden="true" href="#technical-architecture">#</a></h2>
+<p><strong>Backend (Python/FastAPI)</strong>:</p>
+<ul>
+<li>Intelligent extraction via LLM and VLM (advanced OCR)</li>
+<li>REST API with JWT authentication</li>
+<li>MongoDB database and MinIO storage</li>
+<li>Multi-team management with granular permissions</li>
+</ul>
+<p><strong>Frontend (Next.js/React)</strong>:</p>
+<ul>
+<li>DSFR interface (French State Design System)</li>
+<li>Intuitive workflow for import, editing and generation</li>
+<li>NextAuth authentication and Docker deployment</li>
+</ul>
+<h2 id="key-features">Key Features<a hidden class="anchor" aria-hidden="true" href="#key-features">#</a></h2>
+<ul>
+<li><strong>📄 Automatic analysis</strong>: Intelligent information extraction from PDF/DOCX via LLM and VLM</li>
+<li><strong>📝 Compliant generation</strong>: Production of memoranda meeting official standards</li>
+<li><strong>👥 Multi-team</strong>: Secure management with permissions by service</li>
+<li><strong>⚡ Time saving</strong>: Process reduction from several hours to just a few minutes per memorandum</li>
+</ul>
+<h2 id="impact-and-recognition">Impact and Recognition<a hidden class="anchor" aria-hidden="true" href="#impact-and-recognition">#</a></h2>
+<p>MémoireIA transforms a complex administrative process into an automated workflow, ensuring quality and compliance while freeing up valuable time for public servants.</p>
+<p>Initially deployed at the Cabinet Office of MINEFI, the project is experiencing growing success with its adoption by DGE and the Ministry of Interior which are also beginning to use it.</p>
+<p>The project was presented to and commended by Clara Chappaz, Minister Delegate for Artificial Intelligence and Digital Affairs.</p>
+<div style="text-align: center;">
+    <img src="https://nicolassaint.fr/projects/memoireia/chappaz.jpg" alt="MémoireIA presentation to Clara Chappaz" style="width: 100%; max-width: 1200px; height: auto; display: block; margin: 0 auto;" loading="lazy">
+    <p style="font-style: italic; color: #666; font-size: 0.9em; margin-top: 0.5rem;">Photo credit: Célia Bonnin</p>
+</div>
+<h2 id="user-interface">User Interface<a hidden class="anchor" aria-hidden="true" href="#user-interface">#</a></h2>
+<p>Here is an example of a memorandum generated for my own person with my CV as input.</p>
+<h3 id="1-homepage---simplicity-and-efficiency">1. Homepage - Simplicity and efficiency<a hidden class="anchor" aria-hidden="true" href="#1-homepage---simplicity-and-efficiency">#</a></h3>
+<div style="text-align: center;">
+    <img src="https://nicolassaint.fr/projects/memoireia/accueil.png" alt="MémoireIA homepage" style="width: 100%; max-width: 1200px; height: auto; display: block; margin: 0 auto 2rem auto;" loading="lazy">
+</div>
+<p>Clean homepage interface allowing to quickly start a new memorandum or access the history of previous work.</p>
+<h3 id="2-document-import---intuitive-drag--drop">2. Document import - Intuitive drag &amp; drop<a hidden class="anchor" aria-hidden="true" href="#2-document-import---intuitive-drag--drop">#</a></h3>
+<div style="text-align: center;">
+    <img src="https://nicolassaint.fr/projects/memoireia/import.png" alt="Document import interface" style="width: 100%; max-width: 1200px; height: auto; display: block; margin: 0 auto 2rem auto;" loading="lazy">
+</div>
+<p>Simple upload area with drag &amp; drop support for PDF and DOCX, with preview of selected files.</p>
+<h3 id="3-processing-in-progress---ai-process-transparency">3. Processing in progress - AI process transparency<a hidden class="anchor" aria-hidden="true" href="#3-processing-in-progress---ai-process-transparency">#</a></h3>
+<div style="text-align: center;">
+    <img src="https://nicolassaint.fr/projects/memoireia/generation.png" alt="Generation process in progress" style="width: 100%; max-width: 1200px; height: auto; display: block; margin: 0 auto 2rem auto;" loading="lazy">
+</div>
+<p>Real-time visualization of AI analysis steps</p>
+<h3 id="4-generated-memorandum">4. Generated memorandum<a hidden class="anchor" aria-hidden="true" href="#4-generated-memorandum">#</a></h3>
+<div style="text-align: center;">
+    <img src="https://nicolassaint.fr/projects/memoireia/generation_fin.png" alt="Finalized memorandum" style="width: 100%; max-width: 1200px; height: auto; display: block; margin: 0 auto 2rem auto;" loading="lazy">
+</div>
+<p>As soon as the memorandum is completed, you can access it to verify the data, modify it and then download it.</p>
+<h3 id="5-information-extraction---structured-data">5. Information extraction - Structured data<a hidden class="anchor" aria-hidden="true" href="#5-information-extraction---structured-data">#</a></h3>
+<div style="text-align: center;">
+    <img src="https://nicolassaint.fr/projects/memoireia/infos.png" alt="Information extracted by AI" style="width: 100%; max-width: 1200px; height: auto; display: block; margin: 0 auto 2rem auto;" loading="lazy">
+</div>
+<p>Presentation of part of the personal information automatically extracted. The user keeps total control: modification, validation and direct download of the memorandum with all data filled in the associated template.</p>
+<h3 id="6-background">6. Background<a hidden class="anchor" aria-hidden="true" href="#6-background">#</a></h3>
+<div style="text-align: center;">
+    <img src="https://nicolassaint.fr/projects/memoireia/diplomes.png" alt="Education and training section" style="width: 100%; max-width: 1200px; height: auto; display: block; margin: 0 auto 2rem auto;" loading="lazy">
+</div>
+<p>Automatic organization of academic, professional and other activities background.</p>
+<h3 id="7-service-statement---merit-valorization">7. Service statement - Merit valorization<a hidden class="anchor" aria-hidden="true" href="#7-service-statement---merit-valorization">#</a></h3>
+<div style="text-align: center;">
+    <img src="https://nicolassaint.fr/projects/memoireia/expose.png" alt="Service statement" style="width: 100%; max-width: 1200px; height: auto; display: block; margin: 0 auto 2rem auto;" loading="lazy">
+</div>
+<p>Intelligent generation of the statement motivating the proposal with highlighting of exceptional services rendered. After modifying information, possibility to individually regenerate the statement.</p>
+<h3 id="8-personalized-argument---decoration-justification">8. Personalized argument - Decoration justification<a hidden class="anchor" aria-hidden="true" href="#8-personalized-argument---decoration-justification">#</a></h3>
+<div style="text-align: center;">
+    <img src="https://nicolassaint.fr/projects/memoireia/argumentaire.png" alt="Decoration argument" style="width: 100%; max-width: 1200px; height: auto; display: block; margin: 0 auto 2rem auto;" loading="lazy">
+</div>
+<p>Development of a synthetic and personalized argument justifying the attribution of the proposed decoration. Like for the statement, individual regeneration possible after adjustments.</p>
+<h2 id="security">Security<a hidden class="anchor" aria-hidden="true" href="#security">#</a></h2>
+<p>Secure architecture with encryption, JWT authentication, complete audit trail and data isolation by team.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://nicolassaint.fr/en/tags/python/">Python</a></li>
+      <li><a href="https://nicolassaint.fr/en/tags/fastapi/">FastAPI</a></li>
+      <li><a href="https://nicolassaint.fr/en/tags/next.js/">Next.js</a></li>
+      <li><a href="https://nicolassaint.fr/en/tags/ai/">AI</a></li>
+      <li><a href="https://nicolassaint.fr/en/tags/llm/">LLM</a></li>
+      <li><a href="https://nicolassaint.fr/en/tags/vlm/">VLM</a></li>
+      <li><a href="https://nicolassaint.fr/en/tags/ocr/">OCR</a></li>
+      <li><a href="https://nicolassaint.fr/en/tags/mongodb/">MongoDB</a></li>
+      <li><a href="https://nicolassaint.fr/en/tags/minio/">MinIO</a></li>
+      <li><a href="https://nicolassaint.fr/en/tags/react/">React</a></li>
+      <li><a href="https://nicolassaint.fr/en/tags/material-ui/">Material UI</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2025 <a href="https://nicolassaint.fr/en/">Nicolas Saint</a></span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

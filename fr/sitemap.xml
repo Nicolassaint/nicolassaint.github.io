@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://nicolassaint.fr/fr/projects/memoireia/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://nicolassaint.fr/en/projects/memoireia/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-fr"
+                href="https://nicolassaint.fr/fr/projects/memoireia/"
+                />
   </url><url>
     <loc>https://nicolassaint.fr/fr/projects/osi/</loc>
     <xhtml:link
@@ -489,10 +499,30 @@
                 />
   </url><url>
     <loc>https://nicolassaint.fr/fr/tags/material-ui/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://nicolassaint.fr/en/tags/material-ui/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-fr"
+                href="https://nicolassaint.fr/fr/tags/material-ui/"
+                />
   </url><url>
     <loc>https://nicolassaint.fr/fr/tags/math%C3%A9matiques/</loc>
   </url><url>
     <loc>https://nicolassaint.fr/fr/tags/minio/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://nicolassaint.fr/en/tags/minio/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-fr"
+                href="https://nicolassaint.fr/fr/tags/minio/"
+                />
   </url><url>
     <loc>https://nicolassaint.fr/fr/tags/ml/</loc>
     <xhtml:link
@@ -555,6 +585,16 @@
                 />
   </url><url>
     <loc>https://nicolassaint.fr/fr/tags/ocr/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://nicolassaint.fr/en/tags/ocr/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-fr"
+                href="https://nicolassaint.fr/fr/tags/ocr/"
+                />
   </url><url>
     <loc>https://nicolassaint.fr/fr/tags/ollama/</loc>
     <xhtml:link
@@ -643,6 +683,16 @@
                 />
   </url><url>
     <loc>https://nicolassaint.fr/fr/tags/react/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://nicolassaint.fr/en/tags/react/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-fr"
+                href="https://nicolassaint.fr/fr/tags/react/"
+                />
   </url><url>
     <loc>https://nicolassaint.fr/fr/recherche/</loc>
     <xhtml:link
@@ -723,6 +773,16 @@
     <loc>https://nicolassaint.fr/fr/tags/vision-par-ordinateur/</loc>
   </url><url>
     <loc>https://nicolassaint.fr/fr/tags/vlm/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://nicolassaint.fr/en/tags/vlm/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr-fr"
+                href="https://nicolassaint.fr/fr/tags/vlm/"
+                />
   </url><url>
     <loc>https://nicolassaint.fr/fr/tags/web/</loc>
     <xhtml:link
