@@ -1,30 +1,44 @@
 ---
-title: "OlympIA"
-description: "Chatbot pour le Ministère de l'Économie et des Finances"
-dateString: Avril 2024 - Présent
+title: "Olympia - Plateforme OpenWebUI"
+description: "Plateforme OpenWebUI personnalisée pour l'IA générative au Ministère de l'Économie et des Finances"
+dateString: Mai 2024 - Présent
 draft: false
-tags: ["Python", "Streamlit", "LLM", "NLP", "LangChain", "Ollama", "DL", "IA"]
+tags: ["OpenWebUI", "Docker", "LLM", "FastAPI", "JavaScript", "Python", "IA"]
 showToc: false
-weight: 200
+weight: 205
 cover:
-    image: "projects/olympia/olympia-chatbot.png"
+    image: "projects/olympia/logo.png"
 --- 
 ### 🔗 <a href="https://olympia.bhub.cloud" target="_blank">Site web</a>
 
 ## Description
-OlympIA est une application web d'IA pour le Ministère de l'Économie et des Finances. Elle rassemble différents outils d'IA sous une seule interface, facilitant l'accès et l'utilisation pour les utilisateurs.
 
-Voici les outils qui peuvent être utilisés dans OlympIA :
+Olympia est une plateforme basée sur OpenWebUI que j'ai intégrée et personnalisée pour le Ministère de l'Économie et des Finances. Cette solution permet aux agents du ministère d'accéder facilement aux modèles d'IA générative via une interface web moderne et intuitive.
 
-### **Chatbot** :
-- **Chatbot Vanilla** : Chatbot avec un modèle d'IA open source.
-- **Chatbot RAG** : Utilisation d'une pipeline RAG robuste connecté à une base de données de documents.
-- **Recherche Web** : Le chatbot va chercher des informations sur le web.
+## Interface utilisateur
 
-### **Résumé de documents** :
-- **Pipeline de résumé** : Un pipeline qui permet aux utilisateurs de résumer des documents avec le nombre de mots souhaité.
+<div style="text-align: center;">
+    <img src="/projects/olympia/olympia.png" alt="Interface Olympia OpenWebUI" style="width: 100%; max-width: 1200px; height: auto; display: block; margin: 0 auto 2rem auto;" loading="lazy">
+</div>
 
-### **Base de données de documents** :
-- **Base de données** : Une base de données qui permet aux utilisateurs de stocker et d'interroger des documents.
+Interface web moderne permettant l'interaction avec les modèles d'IA via une expérience similaire à ChatGPT, adaptée aux besoins du ministère.
 
-J'ai développé le POC d'OlympIA en utilisant Python, Streamlit, LangChain, l'API Tavily et les modèles llama de Meta fonctionnant sur un GPU NVIDIA A100.
+## Architecture technique
+
+- **Frontend** : Interface OpenWebUI personnalisée avec thématique ministérielle
+- **Backend** : FastAPI avec intégration aux modèles via l'API OlympIA
+- **Déploiement** : Docker sur l'infrastructure GPU du ministère
+- **Sécurité** : Authentification intégrée et isolation des données
+
+## Fonctionnalités
+
+- Interface de chat moderne et responsive
+- Support multi-modèles (LLM open source)
+- Gestion des conversations et historique
+- Partage de conversations entre équipes
+- Administration et monitoring des usages
+- Personnalisation des prompts système
+
+## Impact
+
+Cette plateforme démocratise l'accès à l'IA générative pour tous les agents du ministère avec une interface familière, tout en maintenant la sécurité et la souveraineté des données sur l'infrastructure nationale.

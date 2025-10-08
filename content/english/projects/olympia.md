@@ -1,30 +1,44 @@
 ---
-title: "OlympIA"
-description: "Chatbot for the French Ministry of Economy and Finance"
-dateString: April 2024 - Present
+title: "Olympia - OpenWebUI Platform"
+description: "Customized OpenWebUI platform for generative AI at the French Ministry of Economy and Finance"
+dateString: May 2024 - Present
 draft: false
-tags: ["Python", "Streamlit", "LLM", "NLP", "LangChain", "Ollama", "DL", "AI"]
+tags: ["OpenWebUI", "Docker", "LLM", "FastAPI", "JavaScript", "Python", "AI"]
 showToc: false
-weight: 200
+weight: 205
 cover:
-    image: "projects/olympia/olympia-chatbot.png"
+    image: "projects/olympia/logo.png"
 --- 
 ### 🔗 <a href="https://olympia.bhub.cloud" target="_blank">Website</a>
 
 ## Description
-OlympIA is an AI web application for the French Ministry of Economy and Finance. It gathers different AI tools under one interface, making it easier for users to access and use them. 
 
-Here are the tools that can be used withing OlympIA:
+Olympia is an OpenWebUI-based platform that I integrated and customized for the French Ministry of Economy and Finance. This solution allows ministry agents to easily access generative AI models through a modern and intuitive web interface.
 
-### **Chatbot**:
-- **Vanilla Chatbot**: A chatbot built using an open source LLM.
-- **RAG Chatbot**: A chatbot built using a custom RAG pipeline.
-- **Web Search**: A tool that allows the chatbot to search the web for information.
+## User Interface
 
-### **Document Summarization**:
-- **Summarization Pipeline**: A pipeline that allows users to summarize documents with the numbers of words they want.
+<div style="text-align: center;">
+    <img src="/projects/olympia/olympia.png" alt="Olympia OpenWebUI interface" style="width: 100%; max-width: 1200px; height: auto; display: block; margin: 0 auto 2rem auto;" loading="lazy">
+</div>
 
-### **Document Database**:
-- **Database**: A database that allows users to store and query documents.
+Modern web interface enabling interaction with AI models through a ChatGPT-like experience, adapted to ministry needs.
 
-I developped the POC of OlympIA using Python, Streamlit, LangChain, Tavily API, and Meta's llama models running on a NVIDIA A100 GPU.
+## Technical Architecture
+
+- **Frontend**: Customized OpenWebUI interface with ministry theming
+- **Backend**: FastAPI with integration to models via OlympIA API
+- **Deployment**: Docker on ministry GPU infrastructure
+- **Security**: Integrated authentication and data isolation
+
+## Features
+
+- Modern and responsive chat interface
+- Multi-model support (open source LLMs)
+- Conversation management and history
+- Team conversation sharing
+- Usage administration and monitoring
+- System prompt customization
+
+## Impact
+
+This platform democratizes access to generative AI for all ministry agents with a familiar interface, while maintaining data security and sovereignty on national infrastructure.
