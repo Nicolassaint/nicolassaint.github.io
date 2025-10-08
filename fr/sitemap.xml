@@ -2,6 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://nicolassaint.fr/fr/projects/memoireia/</loc>
+  </url><url>
     <loc>https://nicolassaint.fr/fr/projects/osi/</loc>
     <xhtml:link
                 rel="alternate"
@@ -370,16 +372,16 @@
                 href="https://nicolassaint.fr/fr/tags/google-script/"
                 />
   </url><url>
-    <loc>https://nicolassaint.fr/fr/tags/hugging-face/</loc>
+    <loc>https://nicolassaint.fr/fr/tags/hugging-face-/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://nicolassaint.fr/en/tags/hugging-face/"
+                href="https://nicolassaint.fr/en/tags/hugging-face-/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-fr"
-                href="https://nicolassaint.fr/fr/tags/hugging-face/"
+                href="https://nicolassaint.fr/fr/tags/hugging-face-/"
                 />
   </url><url>
     <loc>https://nicolassaint.fr/fr/tags/ia/</loc>
@@ -486,7 +488,11 @@
                 href="https://nicolassaint.fr/fr/tags/management/"
                 />
   </url><url>
+    <loc>https://nicolassaint.fr/fr/tags/material-ui/</loc>
+  </url><url>
     <loc>https://nicolassaint.fr/fr/tags/math%C3%A9matiques/</loc>
+  </url><url>
+    <loc>https://nicolassaint.fr/fr/tags/minio/</loc>
   </url><url>
     <loc>https://nicolassaint.fr/fr/tags/ml/</loc>
     <xhtml:link
@@ -547,6 +553,8 @@
                 hreflang="fr-fr"
                 href="https://nicolassaint.fr/fr/tags/nlp/"
                 />
+  </url><url>
+    <loc>https://nicolassaint.fr/fr/tags/ocr/</loc>
   </url><url>
     <loc>https://nicolassaint.fr/fr/tags/ollama/</loc>
     <xhtml:link
@@ -634,6 +642,8 @@
                 href="https://nicolassaint.fr/fr/tags/rag/"
                 />
   </url><url>
+    <loc>https://nicolassaint.fr/fr/tags/react/</loc>
+  </url><url>
     <loc>https://nicolassaint.fr/fr/recherche/</loc>
     <xhtml:link
                 rel="alternate"
@@ -711,6 +721,8 @@
                 />
   </url><url>
     <loc>https://nicolassaint.fr/fr/tags/vision-par-ordinateur/</loc>
+  </url><url>
+    <loc>https://nicolassaint.fr/fr/tags/vlm/</loc>
   </url><url>
     <loc>https://nicolassaint.fr/fr/tags/web/</loc>
     <xhtml:link

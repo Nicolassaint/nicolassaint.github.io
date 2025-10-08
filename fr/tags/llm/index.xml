@@ -7,6 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-fr</language><atom:link href="https://nicolassaint.fr/fr/tags/llm/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>MémoireIA - Générateur automatique de mémoires de proposition</title>
+      <link>https://nicolassaint.fr/fr/projects/memoireia/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nicolassaint.fr/fr/projects/memoireia/</guid>
+      <description>Application intelligente pour automatiser la génération de mémoires de proposition pour les principales décorations nationales</description>
+    </item>
+    
+    <item>
       <title>OSI - Chatbot de l&#39;offre de services informatique de Bercy</title>
       <link>https://nicolassaint.fr/fr/projects/osi/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -49,15 +58,6 @@
       
       <guid>https://nicolassaint.fr/fr/experience/bercy_stage/</guid>
       <description>Ministère de l&amp;#39;Économie et des Finances | Paris, France</description>
-    </item>
-    
-    <item>
-      <title>Chat avec l&#39;assistant IA de Nicolas</title>
-      <link>https://nicolassaint.fr/fr/chat/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://nicolassaint.fr/fr/chat/</guid>
-      <description>Chat with our AI Assistant</description>
     </item>
     
   </channel>
