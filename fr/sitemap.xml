@@ -596,16 +596,16 @@
                 href="https://nicolassaint.fr/fr/tags/ocr/"
                 />
   </url><url>
-    <loc>https://nicolassaint.fr/fr/tags/ollama/</loc>
+    <loc>https://nicolassaint.fr/fr/tags/openwebui/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://nicolassaint.fr/en/tags/ollama/"
+                href="https://nicolassaint.fr/en/tags/openwebui/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr-fr"
-                href="https://nicolassaint.fr/fr/tags/ollama/"
+                href="https://nicolassaint.fr/fr/tags/openwebui/"
                 />
   </url><url>
     <loc>https://nicolassaint.fr/fr/tags/optimisation/</loc>
@@ -770,7 +770,11 @@
                 href="https://nicolassaint.fr/fr/tags/"
                 />
   </url><url>
+    <loc>https://nicolassaint.fr/fr/tags/tei/</loc>
+  </url><url>
     <loc>https://nicolassaint.fr/fr/tags/vision-par-ordinateur/</loc>
+  </url><url>
+    <loc>https://nicolassaint.fr/fr/tags/vllm/</loc>
   </url><url>
     <loc>https://nicolassaint.fr/fr/tags/vlm/</loc>
     <xhtml:link

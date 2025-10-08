@@ -349,11 +349,11 @@
     </item>
     
     <item>
-      <title>Ollama</title>
-      <link>https://nicolassaint.fr/fr/tags/ollama/</link>
+      <title>OpenWebUI</title>
+      <link>https://nicolassaint.fr/fr/tags/openwebui/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://nicolassaint.fr/fr/tags/ollama/</guid>
+      <guid>https://nicolassaint.fr/fr/tags/openwebui/</guid>
       <description></description>
     </item>
     
@@ -475,11 +475,29 @@
     </item>
     
     <item>
+      <title>TEI</title>
+      <link>https://nicolassaint.fr/fr/tags/tei/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nicolassaint.fr/fr/tags/tei/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Vision Par Ordinateur</title>
       <link>https://nicolassaint.fr/fr/tags/vision-par-ordinateur/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://nicolassaint.fr/fr/tags/vision-par-ordinateur/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VLLM</title>
+      <link>https://nicolassaint.fr/fr/tags/vllm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nicolassaint.fr/fr/tags/vllm/</guid>
       <description></description>
     </item>
     

@@ -15,5 +15,14 @@
       <description>Chatbot intelligent basé sur du RAG pour le support informatique du Ministère de l&amp;#39;Économie et des Finances</description>
     </item>
     
+    <item>
+      <title>Olympia - Plateforme OpenWebUI</title>
+      <link>https://nicolassaint.fr/fr/projects/olympia/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nicolassaint.fr/fr/projects/olympia/</guid>
+      <description>Plateforme OpenWebUI personnalisée pour l&amp;#39;IA générative au Ministère de l&amp;#39;Économie et des Finances</description>
+    </item>
+    
   </channel>
 </rss>
