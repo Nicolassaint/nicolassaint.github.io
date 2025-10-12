@@ -26,7 +26,7 @@ languages:
         imageHeight: 220
         buttons:
           - name: "Resume"
-            url: "https://drive.google.com/file/d/1tIEjer-gTrKwKipt7h65y3tN4NgUV09d/view"
+            url: "/cv/Nicolas-Saint-Resume-EN.pdf"
     menu:
       main:
         - identifier: home
@@ -70,7 +70,7 @@ languages:
         imageHeight: 220
         buttons:
           - name: "CV"
-            url: "https://drive.google.com/file/d/1dxhC_cC5uo-Zqkl8vhh4v0PEPVQfWUoh/view"
+            url: "/cv/Nicolas-Saint-CV-FR.pdf"
     menu:
       main:
         - identifier: home
@@ -122,7 +122,7 @@ params:
     imageHeight: 220
     buttons:
       - name: Resume
-        url: "https://drive.google.com/file/d/1tIEjer-gTrKwKipt7h65y3tN4NgUV09d/view"
+        url: "/cv/Nicolas-Saint-Resume-EN.pdf"
 
   # List View
   hideDescriptionInList: false
